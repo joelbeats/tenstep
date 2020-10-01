@@ -9,7 +9,7 @@ html {
     height: 100vh;
     padding: 0px;
     margin: 0px;
-    background-color: rgb(7, 157, 202);
+    background-color: indianred;
 }
 
 body {
@@ -23,7 +23,7 @@ header {
     position: sticky;
     width: 100vw;
     height: 10vh;
-    background-color: rgb(85, 94, 146);
+    background-color: indianred;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -55,7 +55,7 @@ section {
     width: 150px;
     display: flex;
     flex-flow: column;
-    background-color: rgb(26, 66, 153);
+    background-color: lightcoral;
 }
 
 #menu1, #menu2 {
@@ -87,7 +87,14 @@ article {
     align-items: center;
     padding: 0px;
     margin: 0px;
-    background-color: rgb(53, 89, 248);
+    background-color: lightsalmon;
+}
+h2 {
+    width: 80%;
+    padding: 1vh;
+    margin: auto;
+    text-align: center;
+    color: white;
 }
 
 p {
@@ -101,13 +108,13 @@ p {
 
 aside {
     width: 30vw;
-    background-color: rgb(51, 121, 153);
+    background-color: lightcoral;
 }
 
 footer {
     height: 10vh;
     position: fixed;
-    background-color: rgb(11, 61, 77);
+    background-color: indianred;
     width: 100%;
     padding: 0;
     margin: 0;
@@ -143,7 +150,7 @@ footer {
         flex-direction: row;
         justify-content: center;
     }
-.logo {
+#logo {
     width: 3rem;
     padding: 10px;
     margin-left: 10px;
@@ -154,7 +161,7 @@ footer {
         margin-right: 50px;
     }
     
-    main {
+    #content {
         flex-flow: column;
         height: 100vh;
         width: 100vw;
@@ -197,6 +204,12 @@ footer {
         width: 100vw;
         display: flex;
         justify-content: space-around;
+    }
+
+    h2 {
+        font-size: 100%;
+        column-fill: auto;
+        width: 80%;
     }
 
     p {
