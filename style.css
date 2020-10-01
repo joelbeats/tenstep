@@ -6,7 +6,7 @@
 
 html {
     width: 100vw;
-    height: 100vh;
+    height: 100%;
     padding: 0px;
     margin: 0px;
     background-color: indianred;
@@ -23,18 +23,25 @@ header {
     position: sticky;
     width: 100vw;
     height: 10vh;
-    background-color: indianred;
+    background-color: rgb(3, 56, 172);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     padding: 0px;
     margin: 0px;
+    border-bottom: rgb(58, 79, 134) 2px solid;
+}
+
+img {
+    filter: invert(100%);
 }
 
 #logo {
     width: 5rem;
+    height: 5rem;
     padding: 20px;
     margin-left: 2vw;
+    filter: invert(100%);
 }
 
 h1 {
@@ -45,23 +52,24 @@ h1 {
 }
 
 #content{
-    height: 80vh;
     width: 100vw;
     display: flex;
-    flex-flow: row;    ;
+    flex-flow: row;
+   
 }
 
 section {
-    width: 150px;
+    width: 20vw;
     display: flex;
     flex-flow: column;
-    background-color: lightcoral;
+    background-color: rgb(12, 94, 89);
+    border-right: rgb(58, 79, 134) 2px solid;
 }
 
 #menu1, #menu2 {
     display: flex;
     flex-flow: column;
-    padding: 0px;
+    padding: 0px 10px;
     margin: 0px;
 }
 
@@ -74,50 +82,80 @@ a {
 
 }
 
+a:hover {
+    filter: invert(100%);
+}
+
+
 #art-asi {
     width: calc(100vw - 150px);
     display: flex;
     flex-flow: row;
+    
 }
 
 article {
+    
     width: 70vw;
-    height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0px;
+    padding: 20px;
     margin: 0px;
-    background-color: lightsalmon;
+    min-height: 80vh;
+    background-color: rgb(4, 107, 107);
 }
+
 h2 {
     width: 80%;
-    padding: 1vh;
-    margin: auto;
+    padding-top: 2vh;
+    margin: 10px auto;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+}
+h3 {
+    width: 80%;
+    padding-top: 2vh;
+    margin: 10px auto;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
 }
 
 p {
-    width: 80%;
-    padding: 1vh;
-    margin: auto;
+    width: 60%;
+    padding: 10px 1vw;
+    top: 10px;
+    margin: 20px auto;
     text-align: center;
-    color: white;
+    color: rgb(196, 196, 196);
 }
 
+ol {
+    color: white;
+    width: 60%;
+    padding: 10px 1vw;
+    top: 10px;
+    margin: 20px auto;
+    text-align: left;
+}
 
 aside {
-    width: 30vw;
-    background-color: lightcoral;
+    width: 10vw;
+    background-color: lightseagreen;
+    border-left: rgb(58, 79, 134) 2px solid
 }
 
 footer {
-    height: 10vh;
-    position: fixed;
-    background-color: indianred;
+    height: 7vh;
+    position: sticky;
+    background-color: rgb(3, 56, 172);
     width: 100%;
     padding: 0;
     margin: 0;
+    border-top: rgb(58, 79, 134) 2px solid;
+    bottom: 0px;
 }
 
 #social-links {
@@ -135,6 +173,28 @@ footer {
     margin: 5px;
     padding: 2px;
 }
+
+.social:hover {
+    filter: invert(100%);
+}
+
+.drugs-pic {
+    width: 200px;
+    filter: invert(100%);
+
+}
+
+.hide-me {
+  display: none;
+}
+
+.show-me {
+    
+   
+    visibility: visible;
+   
+}
+
 @media screen and (max-width: 600px) {
     body {
         top: 0px;
@@ -210,6 +270,15 @@ footer {
         font-size: 100%;
         column-fill: auto;
         width: 80%;
+        text-decoration: underline;
+    }
+
+    h3 {
+        font-size: 100%;
+        column-fill: auto;
+        width: 80%;
+        text-decoration: none;
+        font-weight: 100;
     }
 
     p {
@@ -226,7 +295,8 @@ footer {
 
     footer {
         height: 100px;
-        position: sticky;
+        position: absolute;
+        bottom: 0px;
     }
 
     #social-links {
@@ -246,9 +316,4 @@ footer {
 
         padding-top: 25px;
     }
-    
-    
-
-  }
-  
-
+}
