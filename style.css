@@ -1,35 +1,43 @@
+:root {
+    --header-height: 128px;
+    --footer-height: 128px;
+    
+  }
+  
+
 * {
-    padding: 0px;
-    margin: 0px;
+    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    width: 100vw;
-    height: 100%;
     padding: 0px;
     margin: 0px;
-    background-color: indianred;
+    width: 100vw;
+/*     height: 100vh; */
+background-color: rgb(3, 56, 172);
 }
 
 body {
-    width: 100vw;
-    height: 100vh;
     padding: 0px;
     margin: 0px;
+    width: 100vw;
+    /* height: 100vh; */
 }
 
 header {
     position: sticky;
     width: 100vw;
-    height: 10vh;
+    height: var(--header-height);;
     background-color: rgb(3, 56, 172);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     padding: 0px;
     margin: 0px;
-    border-bottom: rgb(58, 79, 134) 2px solid;
+    border-bottom: rgb(58, 79, 134) 4px solid;
 }
 
 img {
@@ -49,24 +57,32 @@ h1 {
     font-weight: 100;
     letter-spacing: 1vw;
     margin: 3vh 2vw;
+    padding: 10px;
 }
 
 #content{
+    height: calc(100vh - (var(--header-height) + var(--footer-height)));
     width: 100vw;
     display: flex;
     flex-flow: row;
-   
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
 }
 
 section {
     width: 20vw;
+    height: calc(100vh - (var(--header-height) + var(--footer-height)));
     display: flex;
     flex-flow: column;
     background-color: rgb(12, 94, 89);
     border-right: rgb(58, 79, 134) 2px solid;
+    margin-right: -20px;
+    padding: 0px;
+    overflow: scroll;
 }
 
-#menu1, #menu2 {
+#menu1 {
     display: flex;
     flex-flow: column;
     padding: 0px 10px;
@@ -77,7 +93,9 @@ a {
     color: white;
     text-decoration: none;
     list-style-type: none;
-    padding: 25px ;
+    padding: 20px ;
+    font-weight: 100;
+    font-size: small;
     justify-content: space-around;
 
 }
@@ -95,15 +113,32 @@ a:hover {
 }
 
 article {
-    
     width: 70vw;
+    min-height: calc(100vh - (var(--header-height) + var(--footer-height)));
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0px;
     margin: 0px;
-    min-height: 80vh;
     background-color: rgb(4, 107, 107);
+
+}
+aside {
+    width: 10vw;
+    height: 80vh;
+    background-color: lightseagreen;
+    border-left: rgb(58, 79, 134) 2px solid;
+}
+
+footer {
+    height: var(--footer-height);
+    position: sticky;
+    background-color: rgb(3, 56, 172);
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border-top: rgb(58, 79, 134) 2px solid;
+    bottom: 0px;
 }
 
 h2 {
@@ -118,18 +153,28 @@ h3 {
     width: 80%;
     padding-top: 2vh;
     margin: 10px auto;
+    text-align: left;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+h4 {
+    width: 100%;
+    margin: 10px auto;
+    margin-right: 40px;
     text-align: center;
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
 
 p {
-    width: 60%;
+    width: 70%;
     padding: 10px 1vw;
     top: 10px;
     margin: 20px auto;
-    text-align: center;
+    text-align: left;
     color: rgb(196, 196, 196);
+    height: auto;
 }
 
 ol {
@@ -141,30 +186,13 @@ ol {
     text-align: left;
 }
 
-aside {
-    width: 10vw;
-    background-color: lightseagreen;
-    border-left: rgb(58, 79, 134) 2px solid
-}
-
-footer {
-    height: 7vh;
-    position: sticky;
-    background-color: rgb(3, 56, 172);
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    border-top: rgb(58, 79, 134) 2px solid;
-    bottom: 0px;
-}
-
 #social-links {
     display: flex;
     flex: auto;
     justify-content: flex-end;
     align-items: center;
     margin-right: 40px;
-    margin-top: 15px;
+    margin-top: 40px;
     list-style-type: none;
 }
 
@@ -189,81 +217,88 @@ footer {
 }
 
 .show-me {
-    
-   
-    visibility: visible;
-   
+    display: flex;
+}
+
+.art {
+    overflow: scroll;
+    scrollbar-width: none;
 }
 
 @media screen and (max-width: 600px) {
     body {
         top: 0px;
         left: 0px;
-        height: 1000px;
         width: 100vw;
     }
 
     header {
-        height: 100px;
+        height: 70px;
         width: 100vw;
+        position: fixed;
         display: flex;
         flex-direction: row;
         justify-content: center;
     }
+
+    .art {
+        position: relative;
+        top: 140px;
+        overflow: scroll;
+        scrollbar-width: none;
+    }
+    
 #logo {
-    width: 3rem;
-    padding: 10px;
-    margin-left: 10px;
+    width: 2.7rem;
+    height: 2.7rem;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 0px;
 }
 
     h1 {
-        margin: 30px;
-        margin-right: 50px;
+        margin: 5px;
+        margin-right: 5px;
     }
     
     #content {
         flex-flow: column;
         height: 100vh;
         width: 100vw;
-        
-    }
-
-    #art-asi {
-        width: 100vw;
-        height: 100vh;
-        flex-flow: column;
     }
 
     section {
-        padding: 0px;
-        height: 100px;
+        height: 70px;
         width: 100vw;
-        flex-flow: column;
+        position: fixed;
+        top: 70px;
+        height: 70px;
+        flex-flow: row;
     }
     
-    #menu1, #menu2{
+    #menu1 {
         display: flex;
         flex-flow: row;
-        padding: 5px 0px;
+        padding: 5px;
         justify-content: space-around;
         
+    }
+
+    article {
+        width: 100%; 
+        overflow: scroll;  
+        scroll-behavior: auto;
+        scrollbar-width: none;
     }
     
     a {
         color: white;
         text-decoration: none;
         list-style-type: none;
-        margin: 5px 10px;
-        padding: 0px;
+        margin: 1px;
+        padding: 1px;
         justify-content: space-around;
-    
-    }
-
-    article {
-        height: 65vh;
-        width: 100vw;
-        display: flex;
-        justify-content: space-around;
+        font-size: 12px;
     }
 
     h2 {
@@ -274,7 +309,6 @@ footer {
     }
 
     h3 {
-        font-size: 100%;
         column-fill: auto;
         width: 80%;
         text-decoration: none;
@@ -283,37 +317,31 @@ footer {
 
     p {
         font-size: 100%;
-        column-fill: auto;
-        width: 80%;
-        
+        top: auto;
     }
     
     aside {
-        width: 100vw;
-        height: 35vh;
+        display: none;
     }
 
     footer {
-        height: 100px;
-        position: absolute;
-        bottom: 0px;
+        position: sticky;
+        height: 80px;
     }
 
     #social-links {
         display: flex;
-        
         flex-direction: row;
         justify-content: space-evenly;
-        margin: 10px;
-        padding: 10px;
+        margin: 3px;
+        padding: 3px;
         margin-left: 1rem;
-        margin-right: 2rem;
+        margin-right: 1rem;
         list-style-type: none;
     }
     
     .social {
-        width: 35px;
-
-        padding-top: 25px;
+        width: 25px;
+        padding-top: 12px;
     }
 }

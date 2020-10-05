@@ -1,33 +1,22 @@
-
-function toggleVisibility(article) {
-    
+function toggleTo(a) {
+    let artmain = document.querySelector(`#${a}`)
     hideAllArticles()
-    let div = document.getElementById(`#${article}`) // #twelve-steps ("#" + article)
-    div.classList.remove('.hide-me')
-    div.classList.add('.show-me')
-    console.log('toggle')
-    
+    artmain.classList.remove('hide-me');
+   
 }
 
-
-
-function hideAllArticles() 
-{   
-    let article = document.getElementById('content');
-    var articles = document.getElementsByClassName('art-main');
-    articles.forEach(article => {
-    article.classList.add('.hide-me')
+function hideAllArticles() {
+    let articles = document.getElementsByClassName('art-main')
+    Array.prototype.forEach.call(articles, function(c) {
+        c.classList.add('hide-me')
+        console.log('Hiding all ' + c + articles)
     })
-    console.log('hide all')
 }
-
-
 
 function showLandingpage() {
-    hideAllArticles()
-    let landingpage = document.querySelector('#art-about-addiction');
-    landingpage.classList.add('.show-me');
-    console.log('show landingpage')
+    let b = document.getElementById('art-addiction')
+    b.classList.remove('hide-me')
+    console.log('showing landingpage')
 }
 
 hideAllArticles()
