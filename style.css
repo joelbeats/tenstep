@@ -16,15 +16,13 @@ html {
     padding: 0px;
     margin: 0px;
     width: 100vw;
-/*     height: 100vh; */
-background-color:rgb(19, 81, 109);
+    background-color:rgb(19, 81, 109);
 }
 
 body {
     padding: 0px;
     margin: 0px;
     width: 100vw;
-    /* height: 100vh; */
 }
 
 header {
@@ -53,7 +51,7 @@ img {
 }
 
 h1 {
-    color: rgb(202, 202, 202);
+    color: rgb(255, 255, 255);
     font-weight: 100;
     letter-spacing: 1vw;
     margin: 3vh 2vw;
@@ -75,7 +73,7 @@ section {
     height: calc(100vh - (var(--header-height) + var(--footer-height)));
     display: flex;
     flex-flow: column;
-    background-color: rgb(12, 94, 89);
+    background-color: rgb(61, 139, 134);
     border-right: rgb(38, 49, 75) 2px solid;
     margin-right: -20px;
     padding: 0px;
@@ -90,7 +88,7 @@ section {
 }
 
 a {
-    color: white;
+    color: rgb(231, 206, 206);
     text-decoration: none;
     list-style-type: none;
     padding: 20px ;
@@ -125,14 +123,14 @@ article {
 aside {
     width: 10vw;
     height: 80vh;
-    background-color: lightseagreen;
+    background-color:  rgb(61, 139, 134);
     border-left: rgb(58, 79, 134) 2px solid;
 }
 
 footer {
     height: var(--footer-height);
     position: sticky;
-    background-color: rgb(3, 56, 172);
+    background-color:  rgb(19, 81, 109);
     width: 100%;
     padding: 0;
     margin: 0;
@@ -238,34 +236,34 @@ ol {
     }
 
     header {
-        height: 70px;
+        height: 75px;
         width: 100vw;
         position: fixed;
         display: flex;
         flex-direction: row;
         justify-content: center;
         background-color: rgb(4, 107, 107);
+        border-bottom: rgb(29, 89, 112) 2px solid;
     }
 
     .art {
         position: relative;
-        top: 140px;
+        top: 100px;
         overflow: scroll;
         scrollbar-width: none;
-        bottom: 70px;
+        padding-bottom: 250px;
     }
     
     #logo {
         width: 2.7rem;
         height: 2.7rem;
         padding: 5px;
-        margin: 5px;
+        margin: 5px 1px;
         padding-left: 0px;
     }
 
     h1 {
-        margin: 5px;
-        margin-right: 5px;
+        margin: 3px;
     }
     
     #content {
@@ -275,20 +273,17 @@ ol {
     }
 
     section {
-        height: 70px;
+        height: 30px;
         width: 100vw;
         position: fixed;
         top: 70px;
-        height: 70px;
         flex-flow: row;
+        border-bottom: rgb(29, 89, 112) 2px solid;
     }
     
     #menu1 {
         display: flex;
-        flex-flow: row;
-        padding: 5px;
-        justify-content: space-around;
-        
+        flex-flow: row;        
     }
 
     article {
@@ -299,13 +294,14 @@ ol {
     }
     
     a {
-        color: white;
+        color: rgb(238, 238, 238);
         text-decoration: none;
         list-style-type: none;
-        margin: 1px;
-        padding: 1px;
+        margin: 3px;
+        padding: 3px;
         justify-content: space-around;
-        font-size: 12px;
+        font-size: 11px;
+        text-align: center;
     }
 
     h2 {
@@ -324,12 +320,13 @@ ol {
 
     h4 {
         font-weight: 100;
+        font-size: 13px;
     }
 
     p {
         font-size: 100%;
         top: auto;
-        width: 95%;
+        width: 92%;
     }
     
     aside {
@@ -338,7 +335,8 @@ ol {
 
     footer {
         position: sticky;
-        height: 70px;
+        height: 65px;
+        background-color: rgb(4, 107, 107);
     }
 
     #social-links {
@@ -347,13 +345,13 @@ ol {
         justify-content: space-evenly;
         margin: 3px;
         padding: 3px;
-        margin-left: 1rem;
-        margin-right: 1rem;
         list-style-type: none;
     }
     
     .social {
         width: 25px;
+        margin-left: 15px;
+        margin-right: 10px;
         padding-top: 12px;
     }
 }
