@@ -227,6 +227,12 @@ ol {
         margin: 0px;
         width: 100vw;
         background-color: rgb(4, 107, 107);
+        transform: rotate(-90deg);
+        transform-origin: left top;
+        overflow-x: hidden;
+        position: absolute;
+        top: 100%;
+        left: 0;
     }
     
     body {
