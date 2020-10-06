@@ -17,7 +17,7 @@ html {
     margin: 0px;
     width: 100vw;
 /*     height: 100vh; */
-background-color: rgb(3, 56, 172);
+background-color:rgb(19, 81, 109);
 }
 
 body {
@@ -31,13 +31,13 @@ header {
     position: sticky;
     width: 100vw;
     height: var(--header-height);;
-    background-color: rgb(3, 56, 172);
+    background-color: rgb(19, 81, 109);
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     padding: 0px;
     margin: 0px;
-    border-bottom: rgb(58, 79, 134) 4px solid;
+    border-bottom: rgb(29, 89, 112) 4px solid;
 }
 
 img {
@@ -53,7 +53,7 @@ img {
 }
 
 h1 {
-    color: white;
+    color: rgb(202, 202, 202);
     font-weight: 100;
     letter-spacing: 1vw;
     margin: 3vh 2vw;
@@ -76,7 +76,7 @@ section {
     display: flex;
     flex-flow: column;
     background-color: rgb(12, 94, 89);
-    border-right: rgb(58, 79, 134) 2px solid;
+    border-right: rgb(38, 49, 75) 2px solid;
     margin-right: -20px;
     padding: 0px;
     overflow: scroll;
@@ -109,7 +109,6 @@ a:hover {
     width: calc(100vw - 150px);
     display: flex;
     flex-flow: row;
-    
 }
 
 article {
@@ -120,7 +119,7 @@ article {
     align-items: center;
     padding: 0px;
     margin: 0px;
-    background-color: rgb(4, 107, 107);
+    background-color: rgb(18, 92, 92);
 
 }
 aside {
@@ -178,7 +177,7 @@ p {
 }
 
 ol {
-    color: white;
+    color: rgb(196, 196, 196);
     width: 60%;
     padding: 10px 1vw;
     top: 10px;
@@ -209,7 +208,6 @@ ol {
 .drugs-pic {
     width: 200px;
     filter: invert(100%);
-
 }
 
 .hide-me {
@@ -226,6 +224,13 @@ ol {
 }
 
 @media screen and (max-width: 600px) {
+    html {
+        padding: 0px;
+        margin: 0px;
+        width: 100vw;
+        background-color: rgb(4, 107, 107);
+    }
+    
     body {
         top: 0px;
         left: 0px;
@@ -239,6 +244,7 @@ ol {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        background-color: rgb(4, 107, 107);
     }
 
     .art {
@@ -246,15 +252,16 @@ ol {
         top: 140px;
         overflow: scroll;
         scrollbar-width: none;
+        bottom: 70px;
     }
     
-#logo {
-    width: 2.7rem;
-    height: 2.7rem;
-    padding: 5px;
-    margin: 5px;
-    padding-left: 0px;
-}
+    #logo {
+        width: 2.7rem;
+        height: 2.7rem;
+        padding: 5px;
+        margin: 5px;
+        padding-left: 0px;
+    }
 
     h1 {
         margin: 5px;
@@ -315,9 +322,14 @@ ol {
         font-weight: 100;
     }
 
+    h4 {
+        font-weight: 100;
+    }
+
     p {
         font-size: 100%;
         top: auto;
+        width: 95%;
     }
     
     aside {
@@ -326,7 +338,7 @@ ol {
 
     footer {
         position: sticky;
-        height: 80px;
+        height: 70px;
     }
 
     #social-links {
